@@ -2,12 +2,8 @@ import cv2
 import numpy as np
 
 
-
-
 cap =  cv2.VideoCapture(0)
-
 cap.set(3,640)
-
 cap.set(4,480)
 
 width = 320
@@ -18,7 +14,6 @@ confThreshold=0.5
 nmsThreshold = 0.3
 
 classFile = "coco.names"
-  
 classes = []
 
 with open(classFile,'rt') as file:
@@ -66,7 +61,6 @@ def findObjects(outputs,img,confThreshold=0.5,nmsThreshold = 0.3):
 
 while True:
     success, img = cap.read() 
-    
 
     if not success: 
         break
@@ -93,7 +87,5 @@ while True:
     if  key == ord('q'):
         break
 
-   
-###############################################################################
 
 cap.release()
