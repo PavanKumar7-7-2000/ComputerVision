@@ -1,0 +1,3 @@
+requirements:
+cvzone
+opencv-python
